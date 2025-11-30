@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSG TSV "Jūrmala" | Adventes kalendārs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id = "login-screen" class = "centered">
+    <div id="login-container">
+    <h1>🎄 Adventes kalendārs 🎁</h1>
+    <p>Izvēlies savu vārdu no saraksta:</p>
+    <select id="student-select">
+      <option value="">-- Izvēlieties vārdu --</option>
+      <option>Arnolds</option>
+      <option>Aurelija</option>
+      <option>Bruno</option>
+      <option>Eduards</option>
+      <option>Elizabete</option>
+      <option>Ervīns</option>
+      <option>Inese</option>
+      <option>Kārlis</option>
+      <option>Kristers</option>
+      <option>Kristiāns</option>
+      <option>Madars</option>
+      <option>Markuss</option>
+      <option>Mārtiņš</option>
+      <option>Mihails</option>
+      <option>Ralfs</option>
+      <option>Sofija</option>
+      <option>Teodors</option>
+      <option>Valters</option>
+    </select><br>
+    <button id="login-btn">Pierakstīties</button>
+    </div>
+  </div>
+
+  <div id="calendar-container" class="hidden">
+    <div class="header">
+      <h2 id="student-name"></h2>
+        <div id="student-points" class="points-box">Tava punktu kaste: 0 🎁</div>
+        <div id="gift-store" class="hidden">
+          <h3>🎁 Dāvanu veikals</h3>
+
+          <div class="gift" data-cost="60" data-gift="Iziet ātrāk">Iziet no stundas 10 min ātrāk [60 punkti]</div>
+          <div class="gift" data-cost="120" data-gift="Papildu balle">+1 balle pārbaudes darbam [120 punkti]</div>
+
+          <p id="gift-feedback"></p>
+        </div>
+        <button id="open-store">Atvērt dāvanu veikalu 🎁</button>
+
+      <button id="logout-btn">Iziet</button>
+    </div>
+    <div id="calendar" class="calendar-grid"></div>
+  </div>
+
+  <!-- ОБЯЗАТЕЛЬНО добавь hidden здесь ↓↓↓ -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h3 id="question-title"></h3>
+      <div id="question-container"></div>
+      <button id="submit-answer">Atsūtīt</button>
+      <p id="feedback"></p>
+    </div>
+  </div>
+  <!-- Модалка для ввода почты и подтверждения подарка -->
+<div id="gift-modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="close-gift-modal" class="close">&times;</span>
+
+    <h3>🎁 Saņemt dāvanu</h3>
+
+    <p>Ievadiet savu e-pastu, lai saņemtu QR kodu:</p>
+
+    <input type="email" id="gift-email" placeholder="jūsu.epasts@example.com">
+
+    <button id="confirm-gift">Saņemt dāvanu</button>
+
+    <p id="gift-modal-feedback"></p>
+  </div>
+</div>
+  <script src = "./script.js"></script>
+  <script src = "./questions.js"></script>
+</body>
+</html>

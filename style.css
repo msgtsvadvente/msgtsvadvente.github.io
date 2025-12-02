@@ -509,3 +509,18 @@ label { font-size: 15px; color: #12324a; cursor: pointer; }
   color: green;
   font-weight: bold;
 }
+
+#papildu-davana {
+  position: relative;
+  margin: 10px;
+  margin-bottom: 20px;
+  background: whitesmoke;
+  padding: 15px;
+  font-weight: bold;
+  border-radius: 15px;
+  border: none;
+  width: 100%;
+  font-size: 24px;
+  box-shadow: 0 0px 24px gold;
+  animation: pulse 1.2s infinite;
+}

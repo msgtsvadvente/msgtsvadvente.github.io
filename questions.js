@@ -35,11 +35,11 @@ const questions = {
     ],
     6: [
     {type: "info", 
-    content: "Mans Ziemassvētku plāns: 1) ēst. 2) priecāties. 3) atkārtot 1. punktu."}
+    content: "Mans Ziemassvētku plāns: 1) ēst. 2) priecāties. 3) atkārtot 1. punktu. ŠODIEN NAV AKTIVITĀTES!"}
     ],
     7: [
     {type: "info",
-    content: "Sakiet ko gribiet, bet brīnumi sākas tur, kur sākas brīvdienas."
+    content: "Sakiet ko gribiet, bet brīnumi sākas tur, kur sākas brīvdienas. ŠODIEN NAV AKTIVITĀTES!"
     }
     ],
     8: [
@@ -70,10 +70,10 @@ const questions = {
     {type: "text", question: "Ko tu gribētu, lai skolotājs par tevi zina?"}
     ],
     13: [
-    {type: "info", content: "Manā mājā ir divu veidu cilvēki: tie, kas dāvanu papīru tin skaisti, un tie, kas vienkārši cer, ka tas turēsies ar lenti."}
+    {type: "info", content: "Manā mājā ir divu veidu cilvēki: tie, kas dāvanu papīru tin skaisti, un tie, kas vienkārši cer, ka tas turēsies ar lenti. ŠODIEN NAV AKTIVITĀTES!"}
     ],
     14: [
-    {type: "info", content: "Priecīgus Ziemassvētkus! Счастливого Рождества! Merry Christmas! Frohe Weihnachten! Joyeux Noël! ¡Feliz Navidad! Wesołych Świąt!"}
+    {type: "info", content: "Priecīgus Ziemassvētkus! Счастливого Рождества! Merry Christmas! Frohe Weihnachten! Joyeux Noël! ¡Feliz Navidad! Wesołych Świąt! ŠODIEN NAV AKTIVITĀTES!"}
     ],
     2: [
     {type: "info", content: "[ZIEMAS MISIJA: FOTO AR...] Jāuztaisa 3 mazi foto (var selfijus vai vienkārši priekšmetus), kuros redzams kaut kas saistīts ar ziemu vai Ziemassvētkiem. Piemēram, foto ar sniegavīru, foto ar egli, foto ar karstu kakao krūzi utt. Foto jāiesūta matemātikas skolotājam. Šajā aktivitātē ir iespēja tikt pie papildus balvām!"}

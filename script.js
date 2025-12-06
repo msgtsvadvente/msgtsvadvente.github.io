@@ -140,6 +140,7 @@ function openQuestion(day, element) {
 
 // --- Отправка ответов ---
 submitBtn.addEventListener("click", () => {
+  submitBtn.classList.add("hidden");
   if (!currentDay || !currentStudent) return;
 
   const qList = questions[currentDay];

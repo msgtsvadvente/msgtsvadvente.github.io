@@ -47,7 +47,7 @@ const questions = {
     content: `[ŠAHA PĒTNIEKU TAKA]
     Tavs uzdevums ir matēt pretinieka karali pēc viena gājiena (Tu spēlē kā baltie).
     Bet visas šaha figūras pazaudējušās skolas telpās! Atradi tās un, sekojot noradījumiem, novieto uz šaha dēļa tā, lai varētu izdarīt matu.
-    Šajā aktivitātē Tev ir iespēja tikt pie papildus balvām!`
+    Šajā aktivitātē Tev ir iespēja tikt pie papildus balvām! Skaties e-klases e-pastā par papildu informāciju!`
     }
     ],
     9: [

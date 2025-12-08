@@ -191,7 +191,7 @@ if (!studentData[currentDay]) {
     modal.classList.add("hidden");
     questionContainer.innerHTML = "";
     feedback.textContent = "";
-  }, 1200);
+  }, 1);
 });
 
 // --- Закрытие модалки ---
@@ -396,17 +396,14 @@ async function logOpenToDB(student, day, completed, email, points) {
 }
 
 const papildu = document.getElementById("papildu-davana");
-let bonuspunkti = 1;
+let advance = 2;
 
 papildu.addEventListener("click", () => {
-  const noReward = ["Mārtiņš", "Kristers", "Mihails", "Ralfs", "Valters"];
-  const group30 = ["Arnolds", "Aurelija", "Teodors"];
-  const group27 = ["Sofija"];
-  const group21 = ["Bruno", "Eduards", "Madars"];
-  const group18 = ["Inese", "Elizabete"];
-  const group15 = ["Markuss", "Kārlis", "Kristiāns", "Ervīns"];
+  const noReward = ["Ervīns", "Kristers", "Kristiāns", "Markuss", "Mārtiņš", "Mihails", "Ralfs", "Valters"];
+  const group20 = ["Arnolds", "Eduards", "Inese", "Aurelija", "Elizabete", "Madars", "Sofija", "Bruno", "Kārlis"];
+  const group15 = ["Teodors"];
 
-  const bonusTaken = JSON.parse(localStorage.getItem("bonus")) === bonuspunkti;
+  const bonusTaken = JSON.parse(localStorage.getItem("bonusi")) === advance;
 
   if (bonusTaken) {
     alert("Jūs jau ieguvāt balvu!");
@@ -416,23 +413,14 @@ papildu.addEventListener("click", () => {
 
   if (noReward.includes(currentStudent)) {
     alert("Piedodiet, bet Jūs neizpildījāt dienas aktivitātes! Jums nav piešķirts apbalvojums!");
-  } else if (group30.includes(currentStudent)) {
-    addPoints(currentStudent, 30);
-    logOpenToDB(currentStudent, currentDay, false, "", getPoints(currentStudent));
-  } else if (group27.includes(currentStudent)) {
-    addPoints(currentStudent, 27);
-    logOpenToDB(currentStudent, currentDay, false, "", getPoints(currentStudent));
-  } else if (group21.includes(currentStudent)) {
-    addPoints(currentStudent, 21);
-    logOpenToDB(currentStudent, currentDay, false, "", getPoints(currentStudent));
-  } else if (group18.includes(currentStudent)) {
-    addPoints(currentStudent, 18);
+  } else if (group20.includes(currentStudent)) {
+    addPoints(currentStudent, 20);
     logOpenToDB(currentStudent, currentDay, false, "", getPoints(currentStudent));
   } else if (group15.includes(currentStudent)) {
     addPoints(currentStudent, 15);
     logOpenToDB(currentStudent, currentDay, false, "", getPoints(currentStudent));
   }
 
-  localStorage.setItem("bonus", bonuspunkti);
+  localStorage.setItem("bonusi", advance);
   papildu.classList.add("hidden");
 });

@@ -396,14 +396,15 @@ async function logOpenToDB(student, day, completed, email, points) {
 }
 
 const papildu = document.getElementById("papildu-davana");
-let advance = 2;
+let balaba = 3;
 
 papildu.addEventListener("click", () => {
-  const noReward = ["Ervīns", "Kristers", "Kristiāns", "Markuss", "Mārtiņš", "Mihails", "Ralfs", "Valters"];
-  const group20 = ["Arnolds", "Eduards", "Inese", "Aurelija", "Elizabete", "Madars", "Sofija", "Bruno", "Kārlis"];
-  const group15 = ["Teodors"];
+  const noReward = ["Eduards", "Ervīns", "Inese", "Markuss", "Mārtiņš", "Mihails", "Ralfs", "Teodors", "Valters"];
+  const group25 = ["Arnolds", "Aurelija", "Bruno", "Elizabete", "Kārlis", "Sofija"];
+  const group18 = ["Kristers", "Kristiāns"];
+  const recovery = ["Madars"];
 
-  const bonusTaken = JSON.parse(localStorage.getItem("bonusi")) === advance;
+  const bonusTaken = JSON.parse(localStorage.getItem("lietas")) === balaba;
 
   if (bonusTaken) {
     alert("Jūs jau ieguvāt balvu!");
@@ -413,14 +414,17 @@ papildu.addEventListener("click", () => {
 
   if (noReward.includes(currentStudent)) {
     alert("Piedodiet, bet Jūs neizpildījāt dienas aktivitātes! Jums nav piešķirts apbalvojums!");
-  } else if (group20.includes(currentStudent)) {
-    addPoints(currentStudent, 20);
+  } else if (group25.includes(currentStudent)) {
+    addPoints(currentStudent, 25);
     logOpenToDB(currentStudent, currentDay, false, "", getPoints(currentStudent));
-  } else if (group15.includes(currentStudent)) {
-    addPoints(currentStudent, 15);
+  } else if (group18.includes(currentStudent)) {
+    addPoints(currentStudent, 18);
+    logOpenToDB(currentStudent, currentDay, false, "", getPoints(currentStudent));
+  } else if (recovery.includes(currentStudent)) {
+    addPoints(currentStudent, 146);
     logOpenToDB(currentStudent, currentDay, false, "", getPoints(currentStudent));
   }
 
-  localStorage.setItem("bonusi", advance);
+  localStorage.setItem("lietas", balaba);
   papildu.classList.add("hidden");
 });

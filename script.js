@@ -165,7 +165,7 @@ const studentData = JSON.parse(localStorage.getItem(`answers_${currentStudent}`)
 saveAnswer(currentStudent, currentDay, answers);
 
 // Начисляем очки только при первом открытии
-if (!studentData[currentDay]) {
+if (!studentData[currentDay] && currentDay !== 18) {
   addPoints(currentStudent, 10);
 }
 
@@ -241,6 +241,7 @@ function sendToGoogleSheet(student, day, answers) {
 function getPoints(student) {
   return Number(localStorage.getItem(`points_${student}`)) || 0;
 }
+
 
 function addPoints(student, amount) {
   const current = getPoints(student);

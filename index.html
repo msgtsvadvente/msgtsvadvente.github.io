@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Valsts Pārbaudes darba izmēģinājums</title>
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <h1>Valsts Pārbaudes darba izmēģinājums</h1>
+            <div class="status" id="statusBox">Focus mode: OFF</div>
+        </div>
+
+        <div class="exam-box">
+            <!-- Сетка выбора тем -->
+            <div id="subjectSelection">
+                <h3>Izvēlies VPD daļu</h3>
+                <div class="controls">
+                    <!-- Убрали onclick из HTML, всё сделаем в JS -->
+                    <button class="primary" id="btnAlgebra">Algebra</button>
+                    <button class="primary" id="btnAnaliticalGeometry">Analītiskā ģeometrija</button>
+                    <button class="primary" id="btnGeometry">Ģeometrija</button>
+                    <button class="primary" id="btnTrigonometry">Trigonometrija</button>
+                    <button class="primary" id="btnCombinatorics">Kombinatorika un varbutība</button>
+                    <button class="primary" id="btnSecondPart">Otra daļa</button>
+                </div>
+            </div>
+
+            <!-- Интерфейс заданий -->
+            <div id="quizInterface" style="display: none; margin-top: 20px;">
+                <div class="task-header">
+                    <h3 id="currentSubjectTitle">Priekšmets</h3>
+                    <p id="taskProgress">Uzdevums 1 no X</p>
+                </div>
+
+                <div class="task-body" style="text-align: center; padding: 20px; border: 1px solid #eee;">
+                    <img id="taskImage" src="" alt="Uzdevums" style="max-width: 100%; min-height: 200px; background: #f9f9f9;">
+                    <div id="answerContainer" style="margin-top: 15px; text-align: left; padding: 0 10%;">
+                        <!-- Здесь JS будет создавать поля -->
+                    </div>
+                </div>
+
+                <div class="controls" style="justify-content: space-between; display: flex; margin-top: 15px;">
+                    <button class="secondary" id="prevBtn">Atpakaļ</button>
+                    <button class="secondary" id="nextBtn">Uz priekšu</button>
+                </div>
+                <button class="primary" id="finishExamBtn" style="width: 100%; margin-top: 20px; background: #e74c3c;">Beigt darbu</button>
+            </div>
+        </div>
+
+        <div class="event-log">
+            <h3>Notikumu žurnāls</h3>
+            <div id="eventList"></div>
+        </div>
+
+        <!-- Модальное окно -->
+        <div class="modal" id="violationModal">
+            <div class="modal-content">
+                <h2>Jūs esat izgājis no eksāmena režīma</h2>
+                <p id="violationText"></p>
+                <textarea id="reasonInput" placeholder="Ierakstiet iemeslu..."></textarea>
+                <div class="warning">Visi pārkāpumi tiek fiksēti.</div>
+                <div class="controls">
+                    <button class="primary" id="submitReasonBtn">Iesniegt iemeslu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
